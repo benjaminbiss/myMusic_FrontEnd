@@ -1,4 +1,5 @@
 import React from 'react';
+import './DisplaySongs.css';
 
 const DisplaySongs = (props) => {
     let rows = []

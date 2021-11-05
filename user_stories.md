@@ -3,14 +3,14 @@ Learning objective: Consume a Web API and connect a React frontend to it
 Technologies: React, JavaScript, AXIOS, HTML, CSS, Postman
 Total points: /50
 
-(5 points): As a developer, I want to make at least 10 good, consistent commits.
+X (5 points): As a developer, I want to make at least 10 good, consistent commits.
 
-(5 points): As a developer, I want to use the Create-React-App command to create my React project.
+X (5 points): As a developer, I want to use the Create-React-App command to create my React project.
 
-(10 points) As a developer, I want to use AXIOS on the frontend to consume my Music Library Django
+X (10 points) As a developer, I want to use AXIOS on the frontend to consume my Music Library Django
 REST API.
 
-(10 points) As a developer, I want to display the data (song title, album, artist, genre, and release date)
+X (10 points) As a developer, I want to display the data (song title, album, artist, genre, and release date)
 from the API within a table on the frontend.
 
 (5 points) As a developer, I want to create a delete button for each row on my table that will make a
