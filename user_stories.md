@@ -13,10 +13,10 @@ REST API.
 X (10 points) As a developer, I want to display the data (song title, album, artist, genre, and release date)
 from the API within a table on the frontend.
 
-(5 points) As a developer, I want to create a delete button for each row on my table that will make a
+X (5 points) As a developer, I want to create a delete button for each row on my table that will make a
 DELETE request to my backend API for that song object.
 
-(10 points) As a developer, I want to create a form on a stateful component that allows me to POST a
+X (10 points) As a developer, I want to create a form on a stateful component that allows me to POST a
 new song to my backend API.
 
 (5 points): As a developer, I want to create a minimum of three React components and use them within

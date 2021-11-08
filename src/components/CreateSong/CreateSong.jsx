@@ -63,7 +63,7 @@ class CreateSong extends Component {
                         <input type="text" name="release_date" onChange={this.handleChange} value={this.state.release_date}/>
                         </tr>
                         <tr>
-                        <button class="button" type='submit'>Add Song</button>
+                        <button class="button" type='submit' onClick={() => this.props.getSongs()}>Add Song</button>
                         </tr>
                     </table>
                 </div>

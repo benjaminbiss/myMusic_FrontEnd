@@ -28,7 +28,7 @@ class App extends Component {
         this.deleteRow();
         this.getSongs();
     }
-
+    
     deleteRow = async (id) => {
         try {
             await axios.delete(`http://127.0.0.1:8000/music/${id}/`);
