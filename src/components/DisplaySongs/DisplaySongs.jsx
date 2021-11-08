@@ -15,22 +15,27 @@ const DisplaySongs = (props) => {
             <td>{album}</td>
             <td>{genre}</td>
             <td>{release_date}</td>
-            <td><button class="button" name={id} onClick={() => props.delete(id)}>Remove Song</button></td>
+            <td><button class="btn btn-light" name={id} onClick={() => props.delete(id)}>Remove Song</button></td>
         </tr>)
     }
+
+    
     
     return ( 
         <div>
-            <table class='showSongs'>
-                <tr>
-                    <td><strong>ID</strong></td>
-                    <td><strong>Song</strong></td>
-                    <td><strong>Artist</strong></td>
-                    <td><strong>Album</strong></td>
-                    <td><strong>Genre</strong></td>
-                    <td><strong>Release Date</strong></td>
-                </tr>
-                {rows}
+            <table class='table table-striped'>
+                <thead class='thead-dark'>
+                    <tr>
+                        <th scope="col"><strong>Song</strong></th>
+                        <th scope="col"><strong>Artist</strong></th>
+                        <th scope="col"><strong>Album</strong></th>
+                        <th scope="col"><strong>Genre</strong></th>
+                        <th scope="col"><strong>Release Date</strong></th>
+                        <th></th>
+                    </tr>
+                    {rows}
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </thead>
             </table>
         </div>
      );

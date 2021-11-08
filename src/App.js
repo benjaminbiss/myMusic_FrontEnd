@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DisplaySongs from './components/DisplaySongs/DisplaySongs';
 import CreateSong from './components/CreateSong/CreateSong';
+import NavBar from './components/NavBar/NavBar';
+
 
 class App extends Component {
     constructor(props) {
@@ -41,13 +43,13 @@ class App extends Component {
     render() { 
         return ( 
             <div class='container'>
-                <h1>myMusic Library</h1>
-                <div class='child'>
+                <NavBar />
+                <div>
                 {this.state.songs.length > 0 &&
                 <DisplaySongs songs={this.state.songs} delete={this.deleteRow}/>
                 }
                 </div>
-                <div class='childAdd'>
+                <div>
                 <CreateSong getSongs={this.getSongs}/>
                 </div>
             </div>

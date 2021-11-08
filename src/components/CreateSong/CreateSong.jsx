@@ -39,31 +39,38 @@ class CreateSong extends Component {
         return ( 
             <form onSubmit={(event) => this.handleSubmit(event)}>
                 <div>
-                    <table>
-                        <th>Add a Song</th>
-                        <tr>
-                        <label>Song Title</label>
-                        <input type="text" name="title" onChange={this.handleChange} value={this.state.title}/>
-                        </tr>
-                        <tr>
-                        <label>Artist Name</label>
-                        <input type="text" name="artist" onChange={this.handleChange} value={this.state.artist}/>
-                        </tr>
-                        <tr>
-                        <label>Album Name</label>
-                        <input type="text" name="album" onChange={this.handleChange} value={this.state.album}/>
-                        </tr>
-                        <tr>
-                        <label>Genre</label>
-                        <input type="text" name="genre" onChange={this.handleChange} value={this.state.genre}/>
-                        </tr>
-                        <tr>
-                        <label>Release Date</label>
-                        <input type="text" name="release_date" onChange={this.handleChange} value={this.state.release_date}/>
-                        </tr>
-                        <tr>
-                        <button class="button" type='submit' onClick={() => this.props.getSongs()}>Add Song</button>
-                        </tr>
+                    <table class='table'>
+                        <thead class='thead-dark'>  
+                            <th>Add a Song</th>
+                            <th></th>
+                            <th></th>
+                            <tr>
+                            <td><label>Song Title</label></td>
+                            <td><input type="text" name="title" onChange={this.handleChange} value={this.state.title}/></td>
+                            <td><button class="btn btn-secondary" type='submit' onClick={() => this.props.getSongs()}>Add Song</button></td>
+                            </tr>
+                            <tr>
+                            <td><label>Artist Name</label></td>
+                            <td><input type="text" name="artist" onChange={this.handleChange} value={this.state.artist}/></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                            <td><label>Album Name</label></td>
+                            <td><input type="text" name="album" onChange={this.handleChange} value={this.state.album}/></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                            <td><label>Genre</label></td>
+                            <td><input type="text" name="genre" onChange={this.handleChange} value={this.state.genre}/></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                            <td><label>Release Date</label></td>
+                            <td><input type="text" name="release_date" onChange={this.handleChange} value={this.state.release_date}/></td>
+                            <td></td>
+                            </tr>
+                            <tr><td></td><td></td><td></td></tr>
+                        </thead>
                     </table>
                 </div>
             </form>

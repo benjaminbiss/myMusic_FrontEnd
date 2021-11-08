@@ -19,7 +19,7 @@ DELETE request to my backend API for that song object.
 X (10 points) As a developer, I want to create a form on a stateful component that allows me to POST a
 new song to my backend API.
 
-(5 points): As a developer, I want to create a minimum of three React components and use them within
+X (5 points): As a developer, I want to create a minimum of three React components and use them within
 my React application. (EX: SongForm, SearchBar, MusicTable)
 
 (5 points) As a developer, I want to have an aesthetically pleasing user interface to ensure a great user
