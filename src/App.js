@@ -9,7 +9,6 @@ class App extends Component {
         super(props);
         this.state = { 
             songs: [],
-            delete: this.deleteRow,
          }
     }
 
@@ -17,16 +16,22 @@ class App extends Component {
         this.getSongs()
     }
 
+    
     getSongs = async () => {
         let response = await axios.get('http://127.0.0.1:8000/music/');
         this.setState({
             songs: response.data
         })
     }
+    
+    set() {
+        this.deleteRow();
+        this.getSongs();
+    }
 
     deleteRow = async (id) => {
         try {
-            await axios.delete(`http://127.0.0.1:8000/music/${id}`);
+            await axios.delete(`http://127.0.0.1:8000/music/${id}/`);
             this.getSongs();
         }
         catch(event){
@@ -40,11 +45,11 @@ class App extends Component {
                 <h1>myMusic Library</h1>
                 <div class='child'>
                 {this.state.songs.length > 0 &&
-                <DisplaySongs songs={this.state.songs} />
+                <DisplaySongs songs={this.state.songs} delete={this.deleteRow}/>
                 }
                 </div>
                 <div class='childAdd'>
-                <CreateSong />
+                <CreateSong getSongs={this.getSongs}/>
                 </div>
             </div>
          );

@@ -33,6 +33,7 @@ class CreateSong extends Component {
         let response = axios.post('http://127.0.0.1:8000/music/', form_data);
         let data = response.data;
         console.log(data);
+        this.props.getSongs();
     }
 
     render() { 
