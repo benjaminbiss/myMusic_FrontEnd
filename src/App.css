@@ -10,3 +10,34 @@ h1 {
     font-weight: bold;
     padding: .5em;
 }
+
+.container {
+    padding: 1em;
+}
+
+.child {
+    width: 80%;
+    float: left;
+}
+
+.childAdd {
+    width: 20%;
+    float: left;
+}
+
+table, th, td {
+    color: aliceblue;
+    text-align: left;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+table {
+    margin: 0 auto;
+    border: 1px solid aliceblue;
+    padding: 1em;
+}
+
+td {
+padding: .5em;
+}

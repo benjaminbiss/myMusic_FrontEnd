@@ -1,5 +1,4 @@
 import React from 'react';
-import './DisplaySongs.css';
 
 const DisplaySongs = (props) => {
     let rows = []
@@ -17,11 +16,13 @@ const DisplaySongs = (props) => {
             <td>{album}</td>
             <td>{genre}</td>
             <td>{release_date}</td>
+            <td><button class="button" name={i} onClick={() => props.delete(rows[i].id)}>Remove Song</button></td>
         </tr>)
     }
+    
     return ( 
         <div>
-            <table>
+            <table class='showSongs'>
                 <tr>
                     <td><strong>ID</strong></td>
                     <td><strong>Song</strong></td>

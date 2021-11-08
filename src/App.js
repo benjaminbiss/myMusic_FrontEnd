@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import DisplaySongs from './components/DisplaySongs/DisplaySongs';
-import './App.css'
+import CreateSong from './components/CreateSong/CreateSong';
+// import './App.css'
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            songs: []
+            songs: [],
+            delete: this.deleteRow,
          }
     }
 
@@ -22,14 +24,28 @@ class App extends Component {
         })
     }
 
+    deleteRow = async (id) => {
+        try {
+            await axios.delete(`http://127.0.0.1:8000/music/${id}`);
+            this.getSongs();
+        }
+        catch(event){
+            console.log(event);
+        }
+    }
+
     render() { 
-        console.log(this.state.songs)
         return ( 
-            <div>
+            <div class='container'>
                 <h1>myMusic Library</h1>
+                <div class='child'>
                 {this.state.songs.length > 0 &&
                 <DisplaySongs songs={this.state.songs} />
                 }
+                </div>
+                <div class='childAdd'>
+                <CreateSong />
+                </div>
             </div>
          );
     }
