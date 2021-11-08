@@ -47,7 +47,7 @@ class CreateSong extends Component {
                             <tr>
                             <td><label>Song Title</label></td>
                             <td><input type="text" name="title" onChange={this.handleChange} value={this.state.title}/></td>
-                            <td><button class="btn btn-secondary" type='submit' onClick={() => this.props.getSongs()}>Add Song</button></td>
+                            <td><button class="btn btn-light" type='submit' onClick={() => this.props.getSongs()}>Add Song</button></td>
                             </tr>
                             <tr>
                             <td><label>Artist Name</label></td>

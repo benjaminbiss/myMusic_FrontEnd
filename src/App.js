@@ -46,7 +46,7 @@ class App extends Component {
                 <NavBar />
                 <div>
                 {this.state.songs.length > 0 &&
-                <DisplaySongs songs={this.state.songs} delete={this.deleteRow}/>
+                <DisplaySongs songs={this.state.songs} delete={this.deleteRow} sortSongs={this.sortSongs}/>
                 }
                 </div>
                 <div>

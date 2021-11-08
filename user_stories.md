@@ -22,7 +22,7 @@ new song to my backend API.
 X (5 points): As a developer, I want to create a minimum of three React components and use them within
 my React application. (EX: SongForm, SearchBar, MusicTable)
 
-(5 points) As a developer, I want to have an aesthetically pleasing user interface to ensure a great user
+X (5 points) As a developer, I want to have an aesthetically pleasing user interface to ensure a great user
 experience.
 
 (10 points) As a music enthusiast, I want to be able to filter the table of music by album, artist, genre,
