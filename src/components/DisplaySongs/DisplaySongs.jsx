@@ -44,14 +44,14 @@ const DisplaySongs = (props) => {
                         </table>
     }
 
-    function sortSongs() {
+    function sortSongs(param) {
         return sortableSongs.sort((a, b) => {
-            let titleA = a.title,
-                titleB = b.title;
-            if (titleA < titleB) {
+            let keyA = a[param],
+                keyB = b[param];
+            if (keyA < keyB) {
                 return -1;
             }
-            if (titleA > titleB) {
+            if (keyA > keyB) {
                 return 1;
             }
             return 0;
@@ -59,7 +59,7 @@ const DisplaySongs = (props) => {
     }
 
     function displaySorted(param) {
-        let sortedSongs = sortSongs();
+        let sortedSongs = sortSongs(param);
         let sortedRows = [];
         for (let i = 0; i < sortedSongs.length; i++) {
             let id = sortedSongs[i].id;
@@ -77,8 +77,6 @@ const DisplaySongs = (props) => {
                             <td><button class="btn btn-light" name={id} onClick={() => props.delete(id)}>Remove Song</button></td>
                         </tr>)
         }
-        console.log(sortedSongs);
-        console.log(sortedRows)
                 return <table class='table'>
                             <thead class='thead-dark'>
                                 <tr>
@@ -95,10 +93,54 @@ const DisplaySongs = (props) => {
                         </table>
     }
     
+    function sorter(param) {
+        let key = param;
+        switch (key) {
+            case 'title':
+                return <div>
+                            {displaySorted(key)}
+                       </div>
+            case 'artist':
+                return <div>
+                            {displaySorted(key)}
+                       </div>
+            case 'album':
+                return <div>
+                            {displaySorted(key)}
+                       </div>
+            case 'genre':
+                return <div>
+                            {displaySorted(key)}
+                       </div>
+            case 'release_date':
+                return <div>
+                            {displaySorted(key)}
+                       </div>
+            default:
+                return <div>
+                            {displaySorted()}
+                       </div>
+        }
+    }
+
     return ( 
         <div>
-            {displayRows()}
-            {displaySorted()}
+            <form>
+                <select>
+                    <option value="" onChange={displayRows()}>Sort By</option>
+                    <option value="title">Title</option>
+                    <option value="album">Album</option>
+                    <option value="artist">Artist</option>
+                    <option value="genre">Genre</option>
+                    <option value="release_date">Release Date</option>
+                </select>
+            </form>
+            {sorter()}
+            {sorter("title")}
+            {sorter("artist")}
+            {sorter("album")}
+            {sorter("genre")}
+            {sorter("release_date")}
         </div>
      );
 }

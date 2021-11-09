@@ -15,6 +15,7 @@ class App extends Component {
 
     componentDidMount(){
         this.getSongs()
+        console.log(this.state.sortBy)
     }
 
     
